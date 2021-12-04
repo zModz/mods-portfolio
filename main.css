@@ -215,7 +215,7 @@ body{
 }
 
 .home_content .box1{
-    background-image: url("Images/bg_image_1.jpg");
+    background-image: url("Images/box1_bg.jpg");
     width: 100%;
     height: 518px;
     z-index: 2;
@@ -238,16 +238,17 @@ body{
 .home_content .box2{
     width: 33%;
     margin: 0.166%;
-    height: 512px;
+    height: 628px;
     border-style: solid;
     border-width: 5px;
 }
 
 #leftbox{
-    background-image: url("Images/Background-ufo.png");
+    background-image: url("Images/comingsoon.gif");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    border-color: #6E7C7C;
     float: left;
 }
 
@@ -261,30 +262,19 @@ body{
 }
 
 #rightbox{
-    background-image: url("Images/Background_jump.png");
+    background-image: url("Images/comingsoon.gif");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    border-color: #0424FB;
     float: left;
 }
 
-.home_content .box2 .games_logos{
-    width: 32.5%;
+.box2 .games_logos{
+    margin-left: .7%;
+    margin-top: 3.05%;
     position: absolute;
 }
-
-.sidebar.active .home_content .box2 .games_logos{
-    width: calc(32.5% - 240px);
-    transition: all 0.5s ease;
-}
-
-
-/*
-.sidebar.active ~ .home_content{
-    width: calc(100% - 240px);
-    left: 240px;
-}*/
-
 
 #heart{
     color: red;
