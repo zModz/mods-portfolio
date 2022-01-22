@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body{
+    font-family: 'Roboto', sans-serif;
+    /* background-image: url("Images/box1_bg.jpg"); */
+    background-image: linear-gradient(darkred, black);
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.nav-logo{
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+}
+
+/*nav-itens*/
+.nav-itens{
+    color: white;
+    text-decoration: none;
+    margin: 0px 25px 0px 25px;
+}
+
+.nav-itens:hover{
+    color: rgb(172, 172, 172);
+}
+
+/*banner*/
+.banner{
+    display: flex;
+    justify-content: center;
+    margin: 8px 0px 8px 0px;
+}
+
+.img-banner{
+    max-width: 100%;
+}
+
+/*Content*/
+.content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.box2{
+    border: solid 5px;
+}
+
+#leftbox{
+    background-image: url("Images/comingsoon.gif");
+    background-size: cover;
+
+}
+
+#middlebox{
+    background-image: url(Images/Background_sz.gif);
+    background-size: cover;
+}
+
+#rightbox{
+    background-image: url("Images/comingsoon.gif");
+    background-size: cover;
+}
+
+.games_logos{
+    max-width: 100%;
+}
