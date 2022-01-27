@@ -83,11 +83,21 @@ body{
     max-width: 100%;
 }
 
+.showmore{
+    text-align: center;
+    background-color: black;
+}
+
+.showmore:hover{
+    background-color: rgb(14, 14, 14);
+}
+
 /* Information */
 .info{
-   display: flex;
-   flex-direction: column; 
-   justify-content: space-between;
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
 }
 
 .box3{
@@ -95,8 +105,8 @@ body{
 }
 
 .text1-box3{
-   color: white;
-   background-color: rgba(255, 255, 255, 0.25);
+    color: white;
+    background-color: rgba(255, 255, 255, 0.25);
 }
 
 .text2-box3{
