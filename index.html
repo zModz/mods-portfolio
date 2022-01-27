@@ -4,32 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="57x57" href="./comp/assets/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./comp/assets/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./comp/assets/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./comp/assets/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./comp/assets/favicon/apple-icon-114x114.png">    
+    <link rel="apple-touch-icon" sizes="120x120" href="./comp/assets/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./comp/assets/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./comp/assets/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./comp/assets/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./comp/assets/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./comp/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./comp/assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./comp/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./comp/assets/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./comp/assets/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <script src="./scripts.js"></script>
     <title>Portfolio</title>
-
+    
     <!-- Style.css -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
+    <nav class="navbar box-shadow-1">
         <a class="nav-itens" href="#"></a>
         <a class="nav-itens" href="#games">Games</a>
-        <img class="nav-logo" src="media/DC_Logo.png" alt="" srcset="">
+        <img id="toggle-btn" class="nav-logo" src="media/DC_Logo.png" alt="" srcset="">
         <a class="nav-itens" href="#about">About</a>
         <a class="nav-itens" href="#"></a>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
     </nav>
-    <div class="banner">
+    <div class="banner box-shadow-1">
         <img src="Images/box1_bg.jpg" alt="" class="img-banner">
-        <h1 class="banner-text">Hello there ... <span>&#129302</span></h1>
+        <h1 class="banner-text text-neon-effect-2">Hello there ... 
+            <audio id="easterEggAudio">
+            <source src="./media/sounds/easterEggSound.mp3" type="audio/mpeg">
+            Your browser does not support this easter egg element.
+          </audio>
+          <span onclick="playAudio()">&#129302</span></h1>
+    </div>
+    <div class="title-section">
+        <h1 style="color: white; font-size: 100px; letter-spacing: 5px;" class="text-neon-effect">GAMES</h1>
     </div>
     <div class="showcase" id="games">
         <!-- Showcase boxes -->
-        <div class="box2" id="leftbox">
+        <div class="box2 box-shadow-1" id="leftbox">
             <img class="games_logos" id="ufo" src="Images/box2_logo_ufo.png" alt="">
         </div>
-        <div class="box2" id="middlebox">
+        <div class="box2 box-shadow-1" id="middlebox">
             <img class="games_logos" id="sz" src="Images/box2_logo_pag.png" alt="">
         </div>
-        <div class="box2" id="rightbox">
+        <div class="box2 box-shadow-1" id="rightbox">
             <img class="games_logos" id="jump" src="Images/box2_logo_jump.png" alt="">
         </div>
     </div>
@@ -52,6 +82,8 @@
     <div class="socials">
         <!-- <a class="twitter-timeline" href="https://twitter.com/dr_mods?ref_src=twsrc%5Etfw">Tweets by dr_mods</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
     </div>
-
+    
 </body>
 </html>
+
+<!-- No easter eggs here, go away! -->
