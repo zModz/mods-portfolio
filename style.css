@@ -21,7 +21,7 @@ body{
     margin: 5px;
 }
 
-/*nav-itens*/
+/* nav-itens */
 .nav-itens{
     color: white;
     text-decoration: none;
@@ -32,16 +32,16 @@ body{
     color: rgb(172, 172, 172);
 }
 
-/*banner*/
+/* Banner */
 .banner{
     display: flex;
     justify-content: center;
     margin: 8px 0px 8px 0px;
+    position: relative;
 }
 
 .img-banner{
     max-width: 100%;
-    position: relative;
 }
 
 .banner-text{
@@ -51,8 +51,8 @@ body{
     transform: translate(-50%, -50%);
 }
 
-/*Content*/
-.content{
+/* Showcase */
+.showcase{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -69,7 +69,7 @@ body{
 }
 
 #middlebox{
-    background-image: url(Images/Background_sz.gif);
+    background-image: url("Images/Background_sz.gif");
     background-size: cover;
 }
 
@@ -83,4 +83,14 @@ body{
 }
 
 /* Information */
+.info{
+   display: flex; 
+}
 
+.text1-box3{
+   color: white;
+}
+
+.text2-box3{
+    text-align: right;
+}
