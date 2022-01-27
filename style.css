@@ -6,6 +6,7 @@ body{
 }
 
 .navbar{
+    position: sticky;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -42,6 +43,13 @@ body{
     max-width: 100%;
 }
 
+.banner-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 /*Content*/
 .content{
     display: flex;
@@ -72,3 +80,6 @@ body{
 .games_logos{
     max-width: 100%;
 }
+
+/* Information */
+
