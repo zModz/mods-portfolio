@@ -45,6 +45,7 @@ body{
 }
 
 .banner-text{
+    color: white;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -84,7 +85,13 @@ body{
 
 /* Information */
 .info{
-   display: flex; 
+   display: flex;
+   flex-direction: column; 
+}
+
+.box3{
+    height: 5px;
+    margin-bottom: 8px;
 }
 
 .text1-box3{
@@ -92,5 +99,10 @@ body{
 }
 
 .text2-box3{
+    color: white;
     text-align: right;
+}
+
+.text3-box3{
+    color: white;
 }
