@@ -41,6 +41,7 @@ body{
 
 .img-banner{
     max-width: 100%;
+    position: relative;
 }
 
 .banner-text{
