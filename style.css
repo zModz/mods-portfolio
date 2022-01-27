@@ -1,8 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: 'Roboto', sans-serif;
-    /* background-image: url("Images/box1_bg.jpg"); */
     background-image: linear-gradient(darkred, black);
+}
+
+.box-shadow-1 {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.text-neon-effect {
+    text-shadow: 10px 10px 25px rgb(224, 20, 20),
+    -10px 10px 25px rgb(224, 20, 20),
+    -10px -10px 25px rgb(224, 20, 20),
+    10px -10px 25px rgb(224, 20, 20);
+}
+
+.text-neon-effect-2 {
+    text-shadow: 10px 10px 25px rgb(40,4,4),
+    -10px 10px 25px rgb(40,4,4),
+    -10px -10px 25px rgb(40,4,4),
+    10px -10px 25px rgb(40,4,4);
 }
 
 .navbar{
@@ -13,12 +35,25 @@ body{
     align-items: center;
     width: auto;
     background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.navbar:hover {
+    padding: 5px;
 }
 
 .nav-logo{
     width: 50px;
-    height: 50px;
     margin: 5px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.nav-logo:hover {
+    opacity: 1;
+    padding: 10px;
 }
 
 /* nav-itens */
@@ -26,11 +61,63 @@ body{
     color: white;
     text-decoration: none;
     margin: 0px 25px 0px 25px;
+    opacity: 0.6;
+    transition: 0.3s;
 }
 
 .nav-itens:hover{
-    color: rgb(172, 172, 172);
+    opacity: 1;
+    padding: 10px;
+    text-decoration: underline;
 }
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.title-section {
+    display: flex;
+    align-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+/* SCROLL BAR */
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
 
 /* Banner */
 .banner{
@@ -38,35 +125,59 @@ body{
     justify-content: center;
     margin: 8px 0px 8px 0px;
     position: relative;
+    overflow: hidden;
 }
 
 .img-banner{
-    max-width: 100%;
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .banner-text{
     color: white;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    align-self: center;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
 }
 
 /* Showcase */
 .showcase{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .box2{
-    border: solid 5px;
+    border: 2px solid pink;
+    margin: 20px;
+    border-radius: 10px;
 }
 
 #leftbox{
     background-image: url("Images/comingsoon.gif");
     background-size: cover;
-
 }
 
 #middlebox{
@@ -90,6 +201,54 @@ body{
 
 .showmore:hover{
     background-color: rgb(14, 14, 14);
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+    #games {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 700px) {
+    .toggle-btn {
+        display: flex;
+    }
+
+    .nav-itens {
+         display: none;
+         width: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links li {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .navbar-links li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+.content {
+    overflow: hidden;
 }
 
 /* Information */
