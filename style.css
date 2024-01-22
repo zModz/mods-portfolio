@@ -106,10 +106,9 @@ html {
   --bgColor: rgba(245, 245, 245);
   min-height: 100vh;
   display: grid;
-  align-content: center;
+  align-content: flex-start;
   gap: 2rem;
   padding: 2rem;
-  background-color: #555; /*TEMP*/
 }
 
 .timeline-box ul {
@@ -240,11 +239,36 @@ html {
 }
 
 /* Responsive */
-@media (max-width: 600px) {
-  #games {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+@media (min-width: 40rem) {
+  .timeline-box ul {
+    grid-template-columns: 1fr var(--line-w) 1fr;
+  }
+  .timeline-box ul::before {
+    grid-column: 2;
+  }
+  .timeline-box ul li:nth-child(odd) {
+    grid-column: 1;
+  }
+  .timeline-box ul li:nth-child(even) {
+    grid-column: 3;
+  }
+
+  /* start second card */
+  .timeline-box ul li:nth-child(2) {
+    grid-row: 2/4;
+  }
+
+  .timeline-box ul li:nth-child(odd) .date::before {
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    left: 0;
+  }
+
+  .timeline-box ul li:nth-child(odd) .date::after {
+    transform: translate(-50%, -50%);
+    left: calc(100% + var(--col-gap) + var(--line-w) / 2);
+  }
+  .timeline-box ul li:nth-child(odd) .date {
+    border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
   }
 }
 
@@ -284,49 +308,4 @@ html {
 
 .content {
   overflow: hidden;
-}
-
-/* Information */
-.info {
-  margin-top: 8px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.box3 {
-  height: 100px;
-  background-color: rgba(255, 255, 255, 0.25);
-  margin-bottom: 4px;
-  border: 2px solid pink;
-  border-radius: 10px;
-}
-
-.text1-box3 {
-  margin: 5px 0px 0px 5px;
-  width: 50%;
-  color: white;
-}
-/*
-#aboutme{
-    background-image: url("Images/about-me.jpg");
-    background-size: cover;
-}
-*/
-.text2-box3 {
-  margin: 5px 5px 0px 0px;
-  color: white;
-  text-align: right;
-}
-
-.text3-box3 {
-  margin: 5px 0px 0px 5px;
-  color: white;
-}
-
-/* Socials */
-.socials {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
 }
